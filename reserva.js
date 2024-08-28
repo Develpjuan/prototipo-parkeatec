@@ -1,6 +1,7 @@
 const buttton = document.getElementById('btn-booking'),
       toast = document.querySelector('.toast'),
       checkIcon = document.querySelector('.check'),
+      errorIcon = document.querySelector('.error-icon'),
       closeIcon = document.querySelector('.close'),
       progress = document.querySelector('.progress'),
       span1 = document.querySelector('.text-1'),
@@ -39,6 +40,15 @@ form.addEventListener("submit", (event) => {
     }
 });
 
+inputs.forEach(input => {
+    input.addEventListener("blur", () => {
+
+        validateInput(input);
+
+    }) 
+})
+
+
 //Funcion para validar un input
 function validateInput(input) {
     if (input.value.trim() === "") {
@@ -56,6 +66,9 @@ function validateInput(input) {
 function showSuccessToast() {
     toast.classList.add("active");
     progress.classList.add("active");
+    errorIcon.classList.remove("active-error-icon");
+    checkIcon.classList.remove('active-check');
+
 
     setTimeout(() => {
         toast.classList.remove("active");
@@ -75,7 +88,8 @@ function showErrorToast() {
     span1.textContent = "Error";
     span2.textContent = "Reserva incorrecta";
     toast.classList.add("active-error");
-    checkIcon.classList.add("active-error");
+    errorIcon.classList.add("active-error-icon");
+    checkIcon.classList.add('active-check');
     progress.classList.add("active-error");
 
     setTimeout(() => {
