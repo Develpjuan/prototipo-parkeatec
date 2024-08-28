@@ -1,3 +1,6 @@
+.booking {
+    position: relative;
+}
 /*Estilos de la notificacion*/
 .toast {
     position: absolute;
@@ -42,8 +45,25 @@
     border-radius: 50%;
 }
 
-.toast-content .check.active-error {
-    background-color: red;
+.check.active-check {
+    display: none;
+}
+
+
+.toast-content .error-icon {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    background-color: #FF4448;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.error-icon.active-error-icon {
+    display: flex;
 }
 
 .toast-content .message {
@@ -200,6 +220,7 @@
 .input:focus {
     border: 1px solid #ACFFB7;
 }
+
 
 .input.active-input:valid ~ .label {
     top: 0;
