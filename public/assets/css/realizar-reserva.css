@@ -221,7 +221,6 @@
     border: 1px solid #ACFFB7;
 }
 
-
 .input.active-input:valid ~ .label {
     top: 0;
     left: 15px;
