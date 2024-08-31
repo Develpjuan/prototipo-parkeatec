@@ -21,8 +21,9 @@
         <section class="form">
             <div class="container">
                 <!-- Estrcutura del formulario 1 -->
-                <form action="" id="Form1">
-                    <h3>Tus datos personales</h3>
+            <form action="" id="Form1">
+                <h3 class="title-form">Tus datos personales</h3>
+                <div class="content-form">
                     <div class="form-column">
                         <input class="input" type="text">
                         <label class="label">Nombres y apellidos</label>
@@ -35,10 +36,8 @@
                         <input class="input" type="text">
                         <label class="label">Numero</label>
                     </div>
-                    <div class="form-column">
-                        <input class="input" type="text">
-                        <label class="label">Centro de formacion</label>
-                    </div>
+                </div>
+                <div class="content-form">
                     <div class="form-column">
                         <input class="input" type="text">
                         <label class="label">Funcionario</label>
@@ -51,41 +50,54 @@
                         <input class="input" type="text">
                         <label class="label">Aprendiz</label>
                     </div>
-                    <div class="btn-box">
-                        <button type="button" id="Next1">Siguiente</button>
+                </div>
+                <div class="content-form">
+                    <div class="form-column">
+                        <input class="input" type="text">
+                        <label class="label">Centro de formacion</label>
                     </div>
+                </div>
+                
+                <div class="content-btn">
+                    <button type="button" class="btn-form" id="Next1">Siguiente</button>
+                </div>
                 </form>
 
                 <!-- Estrcutura del formulario 2 -->
                 <form action="" id="Form2">
                     <h3>Tus datos personales</h3>
-                    <div class="form-column">
-                        <input class="input" type="text">
-                        <label class="label">Fecha inicio vinculacion</label>
+                    <div class="content-form">
+                        <div class="form-column">
+                            <input class="input" type="text">
+                            <label class="label">Fecha inicio vinculacion</label>
+                        </div>
+                        <div class="form-column">
+                            <input class="input" type="text">
+                            <label class="label">Fecha Terminacion</label>
+                        </div>
+                        <div class="form-column">
+                            <input class="input" type="text">
+                            <label class="label">Telefono</label>
+                        </div>
                     </div>
-                    <div class="form-column">
-                        <input class="input" type="text">
-                        <label class="label">Fecha Terminacion</label>
+                    <div class="content-form">
+                        <div class="form-column">
+                            <input class="input" type="text">
+                            <label class="label">Direccion</label>
+                        </div>
+                        <div class="form-column">
+                            <input class="input" type="text">
+                            <label class="label">Celular</label>
+                        </div>
+                        <div class="form-column">
+                            <input class="input" type="text">
+                            <label class="label">Correo Electronico</label>
+                        </div>
                     </div>
-                    <div class="form-column">
-                        <input class="input" type="text">
-                        <label class="label">Telefono</label>
-                    </div>
-                    <div class="form-column">
-                        <input class="input" type="text">
-                        <label class="label">Direccion</label>
-                    </div>
-                    <div class="form-column">
-                        <input class="input" type="text">
-                        <label class="label">Celular</label>
-                    </div>
-                    <div class="form-column">
-                        <input class="input" type="text">
-                        <label class="label">Correo Electronico</label>
-                    </div>
-                    <div class="btn-box">
-                        <button type="button" id="Back1">Atras</button>
-                        <button type="button" id="Next2">Siguiente</button>
+                    
+                    <div class="content-btn">
+                        <button type="button" class="btn-form" id="Back1">Atras</button>
+                        <button type="button" class="btn-form" id="Next2">Siguiente</button>
                     </div>
                 </form>
 
@@ -258,9 +270,6 @@
                         <button type="submit">Enviar</button>
                     </div>
                 </form>
-
-
-
                 <div class="step-row">
                     <div id="progress"></div>
                     <div class="step-col">Paso 1</div>
