@@ -12,7 +12,7 @@ var progress = document.getElementById("progress");
 Next1.onclick = function() {
     Form1.style.left = "-450px";
     Form2.style.left = "40px";
-    progress.style.width = "240px"; 
+    progress.style.width = "240px";
 }
 
 Back1.onclick = function() {
