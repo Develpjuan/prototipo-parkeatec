@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5808d06a88.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/realizar-reserva.css">
+    <title>Registrar Usuario</title>
+</head>
+<body>
+    <header class="header">
+        <img src="../../public/assets/img/logo-parkeaTec.svg" alt="logo" class="log">
+        <nav class="nav">
+            <a class="item-nav" href="#">Formulario</a>
+            <a class="item-nav" href="#">Generar Reportes</a>
+            <a class="item-nav" href="#">Parqueadero</a>
+            <a class="item-nav" href="#">Ver perfil</a>
+        </nav>
+    </header>
+    <main>
+        <section class="section booking">
+            <div class="toast">
+                <div class="toast-content">
+                    <i class="fa-solid fa-check check"></i>
+                    <i class="fa-solid fa-xmark error-icon"></i>
+    
+                    <div class="message">
+                        <span class="text text-1"></span>
+                        <span class="text text-2"></span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-xmark close"></i>
+    
+                <div class="progressToast"></div>
+            </div>
+            <form action="" class="form" id="form">
+                <h1 class="title-main">Registrar Usuario</h1>
+                <div class="content-form">
+                    <div class="content-input">
+                        <div class="form-column">
+                            <input type="text" class="input">
+                            <label class="label">Nombres</label>
+                        </div>
+                        
+                        <div class="form-column">
+                            <input type="text" class="input">
+                            <label class="label">Apellidos</label>
+                        </div>
+                        <div class="form-column">
+                            <input type="text" class="input">
+                            <label class="label">Numero de documento</label>
+                        </div>
+                    </div>
+                    <div class="content-input">
+                        <div class="form-column">
+                            <input type="text" class="input" name="puesto-asignado" id="puesto-asignado">
+                            <label class="label">Correo Electronico</label>
+                            <p class="input-error">El campo no puede estar vacio, debe escoger un puesto</p>
+                        </div>
+                        <div class="form-column">
+                            <input type="text" class="input">
+                            <label class="label">Contraseña</label>
+                        </div>
+                        <div class="form-column">
+                            <select class="input" name="" id="options">
+                                <option value="">Rol</option>
+                                <option value="option1">Administrador</option>
+                                <option value="option2">Vigilante</option>
+                            </select>
+                        </div>
+                        <div class="content-btn-booking">
+                            <button type="submit" class="btn-booking" id="btn-booking">Registrar</button>
+                        </div>
+                        
+                    </div>
+                </div>            
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <img src="../../public/assets/img/logo-parkeaTec.svg" alt="logo ">
+    </footer>
+    <script src="../../public/assets/js/reserva.js"></script>
+</body>
+</html>
