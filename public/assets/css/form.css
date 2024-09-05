@@ -1,4 +1,5 @@
 .main {
+    position: relative;
     height: calc(100vh - 100px);
 }
 
@@ -17,7 +18,7 @@
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -25,30 +26,70 @@ form {
     transition: .5s;
 }
 
+.form-column-select {
+    margin: 40px 0 20px 0; 
+}
+
 .title-form {
     font-size: 28px;
+    margin: 70px 0 0 0;
+}
+
+.title-form-modific {
+    margin: 70px 0 0 0;
+}
+
+.title-form7 {
+    margin: 0;
 }
 
 .content-form {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    height: 100%;
 }
 
 .content-form-modific {
     display: flex;
     justify-content: flex-start;
     gap: 18px;
+    height: 100%;
 }
 
 .content-form-select {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .content-form-document {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+    width: auto;
+    height: 280px;
+    padding: 10px 10px 0 10px;
+    scroll-behavior: smooth;
+    border: 1px solid #eeeeee;
+    overflow-y: scroll;
+}
+
+.content-form-document::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.content-form-document::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.content-form-document:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
 }
 
 textarea {
@@ -61,7 +102,7 @@ textarea {
     flex-direction: column;
     justify-content: center;
     width: 32%;
-    margin: 25px 0;
+    margin: 0;
 }
 
 .input {
@@ -96,6 +137,55 @@ textarea {
     border: 1px solid #ACFFB7;
 }
 
+.input.active-input:valid ~ .label {
+    top: 0;
+    left: 15px;
+    background-color: #ACFFB7;
+    padding: 0 5px;
+}
+
+.content-img {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* flex-grow: 1; */
+    width: 33%;
+    position: relative;
+    height: 220px;
+    margin-bottom: 50px;
+    background-color: #eeeeee;
+    border: 1px solid #eeeeee;
+}
+
+.icon-file {
+    font-size: 60px;
+}
+
+.content-img img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-file {
+    display: none;
+}
+
+.label-file {
+    position: absolute;
+    top: 230px;
+    text-align: center;
+    padding: 8px;
+    background-color: #ACFFB7;
+    cursor: pointer;
+}
+
+.label-file-select {
+    position: static;
+}
+
 .content-btn {
     display: flex;
     justify-content: flex-end;
@@ -118,12 +208,12 @@ textarea {
     cursor: pointer;
 }
 
-#Form2,
-#Form3,
-#Form4,
-#Form5,
-#Form6,
-#Form7 {
+.Form2,
+.Form4,
+.Form5,
+.Form3,
+.Form6,
+.Form7 {
     left: 1000px;
 }
 
@@ -144,15 +234,15 @@ textarea {
     position: relative;
 }
 
-#progress {
+.progress {
     position: absolute;
     height: 100%;
     width: 14%;
-    background: linear-gradient(to right, #ff105f, #ffad05);
+    background: linear-gradient(to right, #ACFFB7, #DEF3FF);
     transition: 1s;
 }
 
-#progress::after {
+.progress::after {
     content: '';
     height: 0;
     width: 0;
@@ -161,5 +251,85 @@ textarea {
     position: absolute;
     right: -20px;
     top: 0;
-    border-left: 20px solid #ffad06;
+    border-left: 20px solid #DEF3FF;
 }
+
+
+/* Siguiente*/
+.Form1.active-negative,
+.Form2.active-negative,
+.Form3.active-negative,
+.Form4.active-negative,
+.Form5.active-negative,
+.Form6.active-negative {
+    left: -1000px;
+}
+
+.Form2.active-0,
+.Form3.active-0,
+.Form4.active-0,
+.Form5.active-0,
+.Form6.active-0,
+.Form7.active-0 {
+    left: 0px;
+}
+
+.progress.active-form1 {
+    width: 14%;
+}
+
+.progress.active-form2 {
+    width: 28%;
+}
+
+.progress.active-form3 {
+    width: 42%;
+}
+
+.progress.active-form4 {
+    width: 56%;
+}
+
+.progress.active-form5 {
+    width: 70%;
+}
+
+.progress.active-form6 {
+    width: 84%;
+}
+
+.progress.active-form7 {
+    width: 100%;
+}
+
+/* Atras */
+.Form1.active-0,
+.Form2.active-0,
+.Form3.active-0,
+.Form4.active-0,
+.Form5.active-0,
+.Form6.active-0 {
+    left: 0;
+}
+
+.Form2.active-positive,
+.Form3.active-positive,
+.Form4.active-positive,
+.Form5.active-positive,
+.Form6.active-positive,
+.Form7.active-positive {
+    left: 1000px;
+}
+
+
+
+
+
+
+
+
+/* Siguiente */
+
+
+
+
