@@ -3,13 +3,14 @@ const buttton = document.getElementById('btn-booking'),
       checkIcon = document.querySelector('.check'),
       errorIcon = document.querySelector('.error-icon'),
       closeIcon = document.querySelector('.close'),
-      progress = document.querySelector('.progress'),
+      progressToast = document.querySelector('.progressToast'),
       span1 = document.querySelector('.text-1'),
       span2 = document.querySelector('.text-2');
 
 
 const form = document.getElementById('form')
 const inputs = document.querySelectorAll(".input");
+const select = document.getElementById("options");
 const inputPuesto = document.getElementById('puesto-asignado');
 
 
@@ -22,11 +23,11 @@ form.addEventListener("submit", (event) => {
     inputs.forEach(input => {
         //Hacer una validacion al desenforcar el input
         input.addEventListener("blur", () => {
-            validateInput(input);
+            validateInput(input, select);
         });
 
         //Validar cada campo al enviar el formulario
-        if (!validateInput(input)) {
+        if (!validateInput(input, select)) {
             formIsValid = false;
         }            
     });
@@ -64,19 +65,23 @@ function validateInput(input) {
 
 //Funcion para mostrar el toast de éxito
 function showSuccessToast() {
+    span1.textContent = "Reserva";
+    span2.textContent = "registrada exitosamente";
     toast.classList.add("active");
-    progress.classList.add("active");
+    progressToast.classList.add("active");
     errorIcon.classList.remove("active-error-icon");
     checkIcon.classList.remove('active-check');
 
 
     setTimeout(() => {
         toast.classList.remove("active");
-    }, 5000); //1s = 1000 milliseconds
+        span1.textContent = "";
+        span2.textContent = "";
+    }, 3000); //1s = 1000 milliseconds
 
     setTimeout(() => {
-        progress.classList.remove("active");
-    }, 5300);
+        progressToast.classList.remove("active");
+    }, 3000);
 }
 
 
@@ -90,21 +95,21 @@ function showErrorToast() {
     toast.classList.add("active-error");
     errorIcon.classList.add("active-error-icon");
     checkIcon.classList.add('active-check');
-    progress.classList.add("active-error");
+    progressToast.classList.add("active-error");
 
     setTimeout(() => {
         // span1.textContent = textoOriginal;
         // span2.textContent = textoOriginal2;
-        span1.textContent = "Reserva";
-        span2.textContent = "registrada exitosamente";
+        span1.textContent = "";
+        span2.textContent = "";
         toast.classList.remove("active-error");
         
-    }, 5000); //1s = 1000 milliseconds
+    }, 3000); //1s = 1000 milliseconds
 
     setTimeout(() => {
         checkIcon.classList.remove("active-error");
-        progress.classList.remove("active-error");
-    }, 5300);
+        progressToast.classList.remove("active-error");
+    }, 3000);
 }
 
 
@@ -114,6 +119,6 @@ closeIcon.addEventListener("click", () => {
     toast.classList.remove("active-error");
   
     setTimeout(() => {
-        progress.classList.remove("active");
+        progressToast.classList.remove("active");
     }, 300);
 })
