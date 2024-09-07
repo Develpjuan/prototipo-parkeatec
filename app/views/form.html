@@ -13,10 +13,37 @@
     <header class="header">
         <img src="../../public/assets/img/logo-parkeaTec.svg" alt="logo" class="log">
         <nav class="nav">
-            <a class="item-nav" href="#">Formulario</a>
-            <a class="item-nav" href="#">Generar Reportes</a>
-            <a class="item-nav" href="#">Parqueadero</a>
-            <a class="item-nav" href="#">Ver perfil</a>
+            <ul class="menu-horizontal">
+                <li>
+                    <a class="item-nav" href="#">Formulario</a>
+                    <ul class="menu-vertical">
+                        <li><a href="form.html">Llenar Formulario</a></li>
+                        <li><a href="">Revisar Formulario</a></li>
+                    </ul>
+                </li>
+                <li><a class="item-nav" href="reportes.html">Reportes</a></li>
+                <li>
+                    <a class="item-nav" href="">Parqueadero</a>
+                    <ul class="menu-vertical">
+                        <li><a href="">Asignar Espacio</a></li>
+                        <li><a href="verEspaciosParqueadero.html">Ver espacios</a></li>
+                        <li><a href="">Generar strikes</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="item-nav" href="#">Ver perfil</a>
+                    <ul class="menu-vertical">
+                        <li><a href="">Ver QR</a></li>
+                        <li><a href="realizar-reserva.html">Hacer Reserva</a></li>
+                        <li><a href="">Mis vehiculos</a></li>
+                        <li><a href="registrarUsuarios.html">Registrar Usuarios</a></li>
+                        <li><a href="">Strikes</a></li>
+                        <li><a href="ver-factura.html">Mis Facturas</a></li>
+                        <li><a href="">Historial</a></li>
+                        <li><a href="">Cerrar Sesion</a></li>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </header>
     <main class="main">
@@ -177,7 +204,7 @@
                             <label class="label">Modelo</label>
                         </div>
                         <div class="form-column">
-                            <textarea name="" id="" class="input"></textarea>
+                            <textarea name="" id="" class="input textarea"></textarea>
                             <label class="label">observaciones</label>
                         </div>
                     </div>
@@ -206,13 +233,13 @@
                             <label class="label">Color</label>
                         </div>
                     </div>
-                    <div class="content-form-modific">
+                    <div class="content-form content-form-modific">
                         <div class="form-column">
                             <input class="input" type="text">
                             <label class="label">No. Marco</label>
                         </div>
                         <div class="form-column">
-                            <textarea name="" id="" class="input"></textarea>
+                            <textarea name="" id="" class="input textarea"></textarea>
                             <label class="label">observaciones</label>
                         </div>
                     </div>
@@ -239,18 +266,18 @@
                             <i class="fa-regular fa-file icon-file"></i>
                             <img src="" alt="" id="img">
                             <input class="input-file" type="file" name="foto4" id="foto4">
-                            <label class="label-file" for="foto4">Cargar foto usuario</label>
+                            <label class="label-file" for="foto4">Cargar firma usuario</label>
                         </div>
                         <div class="content-img">
                             <i class="fa-regular fa-file icon-file"></i>
                             <img src="" alt="" id="img">
-                            <input class="input-file" type="file" name="foto5" id="foto5">
-                            <label class="label-file" for="foto5">Cargar firma usuario</label>
+                            <input class="input-file" type="file" name="foto5" id="foto5" disabled>
+                            <label class="label-file" for="foto5">Cargar firma vigilante</label>
                         </div>
                         <div class="content-img">
                             <i class="fa-regular fa-file icon-file"></i>
                             <img src="" alt="" id="img">
-                            <input class="input-file" type="file" name="foto5" id="foto6">
+                            <input class="input-file" type="file" name="foto5" id="foto6" disabled>
                             <label class="label-file" for="foto6">Cargar firma administrador</label>
                         </div>
                     </div>
@@ -269,8 +296,8 @@
                         <select name="" id="options">
                             <option value="motocicleta">Motocicleta</option>
                             <option value="bicicleta">Bicicleta</option>
-                            <option value="carro">Carro</option>
-                            <option value="monopatin">Monopatin</option>
+                            <!-- <option value="carro">Carro</option>
+                            <option value="monopatin">Monopatin</option> -->
                         </select>
                         
                     </div>
